@@ -49,18 +49,18 @@ const KilotecApp: React.FC = () => {
 
   const services = [
     {
-      title: "Balanças de Bancada",
-      desc: "Manutenção preventiva e corretiva em balanças comerciais e de laboratório.",
+      title: "Conserto de Balança Digital",
+      desc: "Manutenção de balança digital e eletrônica de bancada. Assistência técnica para balanças Toledo, Filizola, Urano e outras marcas líderes.",
       icon: <Scale className="w-6 h-6" />
     },
     {
-      title: "Balanças Industriais",
-      desc: "Reparo especializado em plataformas de pesagem de médio e grande porte.",
+      title: "Manutenção de Balanças Industriais",
+      desc: "Reparo especializado em plataformas de grande porte e manutenção em balança rodoviária. Calibração garantida por técnicos credenciados.",
       icon: <Wrench className="w-6 h-6" />
     },
     {
-      title: "Certificação INMETRO",
-      desc: "Serviços realizados rigorosamente dentro das normas técnicas vigentes.",
+      title: "Calibração e Certificação",
+      desc: "Empresa de calibração de balanças autorizada. Emissão de certificados exigidos pelos órgãos reguladores e garantia de precisão total.",
       icon: <ShieldCheck className="w-6 h-6" />
     }
   ];
@@ -129,10 +129,10 @@ const KilotecApp: React.FC = () => {
             </div>
             <h1 className="text-5xl md:text-8xl font-heading font-extrabold text-white leading-[0.9] mb-6 tracking-tighter">
               <span className="text-primary-foreground">KILOTEC</span> <br/>
-              <span className="font-light">BALANÇAS</span>
+              <span className="font-light text-4xl md:text-6xl block mt-2">CONSERTO DE BALANÇAS</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed font-light max-w-xl">
-              Assistência técnica especializada na Baixada Fluminense. Conserto de balanças de todos os portes com precisão certificada.
+              Referência em <strong>manutenção de balanças industriais</strong> e <strong>conserto de balança digital</strong> na Baixada Fluminense. Assistência técnica autorizada com precisão certificada pelo IPEM.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 hover:bg-blue-700 transition-all shadow-xl shadow-primary/30">
@@ -188,39 +188,73 @@ const KilotecApp: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Foto 1 & 2: Plataformas Industriais */}
             <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
-                <img src="/assets/balanca_pesos.jpg" alt="Balança com Pesos" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <img src="/assets/balanca_pesos.jpg" alt="Manutenção de balanças industriais com pesos padrão" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p className="font-bold text-sm">Plataforma Industrial</p>
-                    <p className="text-xs text-primary">Aferição com Peso Padrão</p>
+                    <p className="font-bold text-sm">Pesos Padrão</p>
+                    <p className="text-xs text-primary">Calibração e Manutenção de Balanças</p>
                 </div>
             </div>
 
             {/* Foto 3: Urano */}
             <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
-                <img src="/assets/balanca_urano.jpg.png" alt="Balança Urano" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <img src="/assets/balanca_urano.jpg.png" alt="Conserto de balança digital Urano - Assistência Técnica" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="font-bold text-sm">Balança de Precisão</p>
-                    <p className="text-xs text-primary">Marca: Urano</p>
+                    <p className="text-xs text-primary">Manutenção Balança Urano</p>
                 </div>
             </div>
 
             {/* Foto 4: Pop-Z */}
             <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
-                <img src="/assets/balanca_popz.jpg.jpg" alt="Balança Pop-Z" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <img src="/assets/balanca_popz.jpg.jpg" alt="Conserto balança digital Pop-Z - Manutenção eletrônica" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="font-bold text-sm">Balança Comercial</p>
-                    <p className="text-xs text-primary">Marca: Pop-Z</p>
+                    <p className="text-xs text-primary">Conserto de Balança Eletrônica</p>
                 </div>
             </div>
 
             {/* Foto 5: Grande Porte */}
             <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
-                <img src="/assets/balanca_industrial.jpg.jpg" alt="Balança Industrial" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <img src="/assets/balanca_industrial.jpg.jpg" alt="Reparo de balanças industriais de grande porte" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="font-bold text-sm">Grande Porte</p>
-                    <p className="text-xs text-primary">Manutenção Especializada</p>
+                    <p className="text-xs text-primary">Manutenção Técnica Industrial</p>
                 </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Keyword Rich Section */}
+      <section className="py-20 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-heading font-extrabold text-slate-950 mb-8">
+              Especialistas em <span className="text-primary italic">Manutenção e Calibração</span>
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 text-left text-sm text-slate-600">
+              <div className="space-y-2">
+                <p>• Conserto de balança digital</p>
+                <p>• Manutenção balança Toledo</p>
+                <p>• Assistência técnica Filizola</p>
+                <p>• Reparo de balança Urano</p>
+              </div>
+              <div className="space-y-2">
+                <p>• Manutenção de balança industrial</p>
+                <p>• Calibração de balança rodoviária</p>
+                <p>• Conserto de balança eletrônica</p>
+                <p>• Técnico de balanças certificado</p>
+              </div>
+              <div className="space-y-2">
+                <p>• Assistência técnica Belford Roxo</p>
+                <p>• Manutenção na Baixada Fluminense</p>
+                <p>• Empresa de calibração credenciada</p>
+                <p>• Reparo de balanças de precisão</p>
+              </div>
+            </div>
+            <p className="mt-12 text-slate-500 text-sm leading-relaxed italic">
+              A Kilotec Balanças é a sua melhor escolha para <strong>conserto de balanças</strong> e <strong>manutenção preventiva</strong>. Atendemos com excelência técnica marcas como Toledo, Filizola e Urano, garantindo que sua balança digital ou industrial esteja sempre de acordo com as normas do INMETRO. Seja para balanças rodoviárias, comerciais ou de laboratório, nossa equipe está pronta para oferecer a melhor assistência técnica do Rio de Janeiro.
+            </p>
           </div>
         </div>
       </section>
