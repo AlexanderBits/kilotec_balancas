@@ -50,7 +50,7 @@ const KilotecApp: React.FC = () => {
   const services = [
     {
       title: "Conserto de Balança Digital",
-      desc: "Manutenção de balança digital e eletrônica de bancada. Assistência técnica para balanças Toledo, Filizola, Urano e outras marcas líderes.",
+      desc: "Manutenção de balança digital e eletrônica de bancada. Assistência técnica para balanças Toledo, Filizola, Urano, Ramuza e outras marcas líderes.",
       icon: <Scale className="w-6 h-6" />
     },
     {
@@ -237,7 +237,7 @@ const KilotecApp: React.FC = () => {
                 <p>• Conserto de balança digital</p>
                 <p>• Manutenção balança Toledo</p>
                 <p>• Assistência técnica Filizola</p>
-                <p>• Reparo de balança Urano</p>
+                <p>• Reparo de balança Urano / Ramuza</p>
               </div>
               <div className="space-y-2">
                 <p>• Manutenção de balança industrial</p>
@@ -253,7 +253,7 @@ const KilotecApp: React.FC = () => {
               </div>
             </div>
             <p className="mt-12 text-slate-500 text-sm leading-relaxed italic">
-              A Kilotec Balanças é a sua melhor escolha para <strong>conserto de balanças</strong> e <strong>manutenção preventiva</strong>. Atendemos com excelência técnica marcas como Toledo, Filizola e Urano, garantindo que sua balança digital ou industrial esteja sempre de acordo com as normas do INMETRO. Seja para balanças rodoviárias, comerciais ou de laboratório, nossa equipe está pronta para oferecer a melhor assistência técnica do Rio de Janeiro.
+              A Kilotec Balanças é a sua melhor escolha para <strong>conserto de balanças</strong> e <strong>manutenção preventiva</strong>. Atendemos com excelência técnica marcas como Toledo, Filizola, Ramuza e Urano, garantindo que sua balança digital ou industrial esteja sempre de acordo com as normas do INMETRO. Seja para balanças rodoviárias, comerciais ou de laboratório, nossa equipe está pronta para oferecer a melhor assistência técnica do Rio de Janeiro.
             </p>
           </div>
         </div>
