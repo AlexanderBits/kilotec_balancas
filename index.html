@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kilotec Balanças | Conserto e Manutenção de Balanças Digitais e Industriais</title>
+    <meta name="description" content="Especialista em conserto de balanças e manutenção de balança digital em Belford Roxo e toda Baixada Fluminense. Autorizada IPEM/INMETRO. Reparo de balanças Toledo, Filizola, Urano e industriais.">
+    <meta name="keywords" content="conserto de balanças, manutenção de balanças, conserto de balança digital, manutenção de balança digital, manutenção de balança industrial, assistência técnica balança digital, Kilotec Balanças, conserto balança toledo, manutenção balança filizola, assistência técnica balança urano">
+
+    <!-- SEO Local e Social -->
+    <meta property="og:title" content="Kilotec Balanças | Assistência Técnica Certificada">
+    <meta property="og:description" content="Conserto e manutenção de balanças de todos os tamanhos na Baixada Fluminense. Líder absoluta em precisão.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/kilotec_balancas/assets/fachada.jpg.png">
+
+    <!-- Schema.org JSON-LD para SEO Local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Kilotec Balanças",
+      "image": "/assets/fachada.jpg.png",
+      "@id": "",
+      "url": "https://desenvolvimentodesites.dev.br/",
+      "telephone": "+55-21-3771-8393",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Joaquim da Costa Lima, 2011",
+        "addressLocality": "Belford Roxo",
+        "addressRegion": "RJ",
+        "postalCode": "26115-315",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.6773531,
+        "longitude": -43.3768285
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://wa.me/5521964089358"
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: {
+                DEFAULT: "hsl(var(--primary))",
+                foreground: "hsl(var(--primary-foreground))",
+              },
+              secondary: {
+                DEFAULT: "hsl(var(--secondary))",
+                foreground: "hsl(var(--secondary-foreground))",
+              },
+              destructive: {
+                DEFAULT: "hsl(var(--destructive))",
+                foreground: "hsl(var(--destructive-foreground))",
+              },
+              muted: {
+                DEFAULT: "hsl(var(--muted))",
+                foreground: "hsl(var(--muted-foreground))",
+              },
+              accent: {
+                DEFAULT: "hsl(var(--accent))",
+                foreground: "hsl(var(--accent-foreground))",
+              },
+              popover: {
+                DEFAULT: "hsl(var(--popover))",
+                foreground: "hsl(var(--popover-foreground))",
+              },
+              card: {
+                DEFAULT: "hsl(var(--card))",
+                foreground: "hsl(var(--card-foreground))",
+              },
+            },
+            borderRadius: {
+              lg: "var(--radius)",
+              md: "calc(var(--radius) - 2px)",
+              sm: "calc(var(--radius) - 4px)",
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --background: 220 33% 98%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 240 41% 42%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 240 41% 42%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 240 41% 42%;
+        --radius: 0.75rem;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      ::selection {
+        background-color: hsl(var(--primary));
+        color: white;
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/kilotec_balancas/assets/index-aGJ8KcUz.js"></script>
+</head>
+  <body class="bg-background text-foreground font-sans antialiased">
+    <div id="root"></div>
+  </body>
+</html>
