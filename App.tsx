@@ -50,7 +50,7 @@ const KilotecApp: React.FC = () => {
   const services = [
     {
       title: "Conserto de Balança Digital",
-      desc: "Manutenção de balança digital e eletrônica de bancada. Assistência técnica para balanças Toledo, Filizola, Urano, Ramuza e outras marcas líderes.",
+      desc: "Manutenção de balança digital e eletrônica de bancada. Assistência técnica para balanças Toledo, Filizola, Urano, Ramuza, etc.",
       icon: <Scale className="w-6 h-6" />
     },
     {
