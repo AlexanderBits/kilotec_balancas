@@ -313,11 +313,16 @@ const KilotecApp: React.FC = () => {
           </div>
           <div className="text-center text-slate-500 text-xs space-y-4">
             <p>© 2024 Kilotec Balanças. Todos os direitos reservados.</p>
-            <p className="font-light">
-              Desenvolvido por <a href="https://desenvolvimentodesites.dev.br/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-blue-400 font-bold transition-colors">Alexis Marketing & Dev</a>
-              <span className="mx-2">•</span>
-              Construído em <span className="italic">Models next-gen React-Starter</span>
-            </p>
+            <a 
+              href="https://desenvolvimentodesites.dev.br/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="block font-light hover:text-white transition-colors group"
+            >
+              Desenvolvido por <span className="text-primary font-bold group-hover:text-blue-400 transition-colors">Alexis Marketing & Dev</span> 
+              <span className="mx-2">•</span> 
+              Construído em <span className="italic font-bold">Models next-gen React-Starter</span>
+            </a>
             <p className="text-[10px] opacity-50">Baixada Fluminense, Rio de Janeiro.</p>
           </div>
         </div>
