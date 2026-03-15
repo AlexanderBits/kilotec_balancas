@@ -1,19 +1,27 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ⚖️ Kilotec Balanças - Landing Page
 
-# Run and deploy your AI Studio app
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-This contains everything you need to run your app locally.
+A **Kilotec Balanças** é uma plataforma institucional focada em apresentar serviços de assistência técnica especializada em pesagem industrial e comercial na região da Baixada Fluminense.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1aZxr69zSUF1ghw62RQsFUFRo1yV-NWhK
+## 🚀 Sobre o Projeto
+Este repositório contém o código-fonte do site oficial da Kilotec, desenvolvido para oferecer uma experiência de usuário fluida, permitindo que clientes solicitem orçamentos via WhatsApp e consultem a localização da empresa rapidamente.
 
-## Run Locally
+## ✨ Funcionalidades (Features)
+- **Design Responsivo:** Adaptado para dispositivos móveis, tablets e desktops.
+- **Seção de Especialidades:** Detalhamento de manutenção de bancada, industrial e certificação INMETRO.
+- **Galeria de Projetos:** Exibição de fotos reais de equipamentos em operação.
+- **Geolocalização:** Mapa integrado para facilitar a chegada de clientes à unidade em Belford Roxo - RJ.
+- **Call-to-Action (CTA):** Botões flutuantes e fixos integrados diretamente com o WhatsApp.
 
-**Prerequisites:**  Node.js
+## 🛠️ Tecnologias Sugeridas
+- HTML5 / CSS3 (SASS)
+- JavaScript (ES6+)
+- Google Maps API
+- [Framework opcional: React / Next.js / Tailwind CSS]
 
-
-1. Install dependencies:
-   `npm install`
-2. Run the app:
-   `npm run dev`
+## 📦 Como Instalar e Rodar
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/AlexanderBits/kilotec-balancas-web.git](https://github.com/AlexanderBits/kilotec-balancas-web.git)
