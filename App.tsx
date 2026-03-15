@@ -132,7 +132,7 @@ const KilotecApp: React.FC = () => {
               <span className="font-light text-4xl md:text-6xl block mt-2">CONSERTO DE BALANÇAS</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed font-light max-w-xl">
-              Referência em <strong>manutenção de balanças industriais</strong> e <strong>conserto de balança digital</strong> na Baixada Fluminense. Assistência técnica autorizada com precisão certificada pelo IPEM.
+              Referência em <strong>manutenção de balanças industriais</strong> e <strong>conserto de balança digital</strong> no Rio de Janeiro, Baixada Fluminense e Grande Rio. Assistência técnica autorizada com precisão certificada pelo IPEM.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 hover:bg-blue-700 transition-all shadow-xl shadow-primary/30">
@@ -246,14 +246,14 @@ const KilotecApp: React.FC = () => {
                 <p>• Técnico de balanças certificado</p>
               </div>
               <div className="space-y-2">
-                <p>• Assistência técnica Belford Roxo</p>
-                <p>• Manutenção na Baixada Fluminense</p>
-                <p>• Empresa de calibração credenciada</p>
+                <p>• Atendimento Rio de Janeiro</p>
+                <p>• Manutenção Baixada Fluminense</p>
+                <p>• Empresa de calibração no Grande Rio</p>
                 <p>• Reparo de balanças de precisão</p>
               </div>
             </div>
             <p className="mt-12 text-slate-500 text-sm leading-relaxed italic">
-              A Kilotec Balanças é a sua melhor escolha para <strong>conserto de balanças</strong> e <strong>manutenção preventiva</strong>. Atendemos com excelência técnica marcas como Toledo, Filizola, Ramuza e Urano, garantindo que sua balança digital ou industrial esteja sempre de acordo com as normas do INMETRO. Seja para balanças rodoviárias, comerciais ou de laboratório, nossa equipe está pronta para oferecer a melhor assistência técnica do Rio de Janeiro.
+              A Kilotec Balanças é a sua melhor escolha para <strong>conserto de balanças</strong> e <strong>manutenção preventiva</strong>. Atendemos com excelência técnica marcas como Toledo, Filizola, Ramuza e Urano em todo o <strong>Rio de Janeiro, Baixada Fluminense e Grande Rio</strong>. Garantimos que sua balança digital ou industrial esteja sempre de acordo com as normas do INMETRO. Seja para balanças rodoviárias, comerciais ou de laboratório, nossa equipe está pronta para oferecer a melhor assistência técnica do estado.
             </p>
           </div>
         </div>
