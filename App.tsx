@@ -1,39 +1,345 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Box } from 'lucide-react';
+import { 
+  MapPin, 
+  Phone, 
+  Clock, 
+  ChevronRight, 
+  CheckCircle2, 
+  Wrench, 
+  ShieldCheck, 
+  Scale,
+  Menu,
+  X,
+  ExternalLink,
+  MessageCircle
+} from 'lucide-react';
+import PrivacyPolicy from './PrivacyPolicy';
 
-const App: React.FC = () => {
+const KilotecApp: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState<'home' | 'privacy'>('home');
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  if (currentPage === 'privacy') {
+    return (
+      <div onClick={(e) => {
+        const target = e.target as HTMLElement;
+        if (target.closest('a[href="/"]')) {
+          e.preventDefault();
+          setCurrentPage('home');
+        }
+      }}>
+        <PrivacyPolicy />
+      </div>
+    );
+  }
+
+  const primaryColor = "#3F3F96"; // Royal Blue from logo
+  const whatsappUrl = "https://wa.me/5521964089358?text=Ol%C3%A1%2C%20encontrei%20a%20emrpesa%20pelo%20site%20de%20voc%C3%AAs.%20Preciso%20de%20manuten%C3%A7%C3%A3o%20em%20uma%20balan%C3%A7a.";
+
+
+  const services = [
+    {
+      title: "Balanças de Bancada",
+      desc: "Manutenção preventiva e corretiva em balanças comerciais e de laboratório.",
+      icon: <Scale className="w-6 h-6" />
+    },
+    {
+      title: "Balanças Industriais",
+      desc: "Reparo especializado em plataformas de pesagem de médio e grande porte.",
+      icon: <Wrench className="w-6 h-6" />
+    },
+    {
+      title: "Certificação INMETRO",
+      desc: "Serviços realizados rigorosamente dentro das normas técnicas vigentes.",
+      icon: <ShieldCheck className="w-6 h-6" />
+    }
+  ];
+
   return (
-    <div className="flex min-h-screen w-full items-center justify-center p-4 bg-muted/30">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full max-w-md overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm"
-      >
-        <div className="flex flex-col items-center justify-center p-6 text-center space-y-4">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-muted">
-            <Box className="h-8 w-8 text-muted-foreground" />
+    <div className="min-h-screen bg-background font-sans text-foreground overflow-x-hidden">
+      {/* Navigation */}
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
+        <div className="container mx-auto px-6 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
+              K
+            </div>
+            <span className={`text-xl font-heading font-extrabold tracking-tight ${isScrolled ? 'text-primary' : 'text-primary'}`}>
+              KILOTEC <span className="font-light">BALANÇAS</span>
+            </span>
           </div>
-          
-          <div className="space-y-2">
-            <h1 className="text-2xl font-semibold tracking-tight">
-              App Initialized
-            </h1>
-            <p className="text-sm text-muted-foreground">
-              Ready for development. Edit <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">App.tsx</code> to start building.
-            </p>
+
+          <div className="hidden md:flex items-center gap-8">
+            {['Início', 'Serviços', 'Sobre', 'Localização'].map((item) => (
+              <a 
+                key={item} 
+                href={`#${item.toLowerCase()}`} 
+                className={`text-sm font-bold transition-colors ${isScrolled ? 'text-slate-700 hover:text-primary' : 'text-white hover:text-blue-200'}`}
+              >
+                {item}
+              </a>
+            ))}
+            <a 
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-blue-700 transition-all shadow-lg hover:shadow-primary/20"
+            >
+              <MessageCircle className="w-4 h-4" /> Orçamento
+            </a>
           </div>
+
+          <button className="md:hidden text-primary" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section id="início" className="relative h-[85vh] flex items-center pt-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          {/* Placeholder para a foto da fachada: fachada.jpg */}
+          <img 
+            src="/assets/fachada.jpg.png" 
+            alt="Fachada Kilotec" 
+            className="w-full h-full object-cover object-bottom brightness-[0.3]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
         </div>
 
-        <div className="border-t bg-muted/50 p-4 flex justify-center">
-            <p className="text-xs text-muted-foreground">
-                React • TypeScript • Tailwind • Framer Motion
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl"
+          >
+            <div className="inline-flex items-center gap-2 bg-primary px-4 py-1.5 rounded-full mb-6 text-white text-xs font-black tracking-widest uppercase shadow-lg shadow-primary/20">
+              <ShieldCheck className="w-4 h-4" /> Autorizada IPEM/INMETRO
+            </div>
+            <h1 className="text-5xl md:text-8xl font-heading font-extrabold text-white leading-[0.9] mb-6 tracking-tighter">
+              <span className="text-primary-foreground">KILOTEC</span> <br/>
+              <span className="font-light">BALANÇAS</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed font-light max-w-xl">
+              Assistência técnica especializada na Baixada Fluminense. Conserto de balanças de todos os portes com precisão certificada.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 hover:bg-blue-700 transition-all shadow-xl shadow-primary/30">
+                <MessageCircle className="w-6 h-6" /> CHAMAR NO WHATSAPP
+              </a>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </section>
+
+      {/* Services Section */}
+      <section id="serviços" className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-sm font-black text-primary tracking-[0.3em] uppercase mb-4">Especialidades</h2>
+              <h3 className="text-4xl md:text-5xl font-heading font-extrabold text-slate-950">
+                Manutenção Completa: <br/> Da Bancada à Indústria
+              </h3>
+            </div>
+            <p className="text-slate-500 italic max-w-xs border-l-4 border-primary pl-4">
+              "Trabalhamos com marcas líderes como Urano, Filizola e Toledo, garantindo o selo de conformidade."
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-10">
+            {services.map((service, idx) => (
+              <div key={idx} className="group relative transition-all">
+                <div className="absolute -inset-2 bg-slate-50 rounded-[2rem] scale-95 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all"></div>
+                <div className="relative p-6">
+                  <div className="w-16 h-16 bg-slate-950 rounded-2xl flex items-center justify-center text-white mb-8 group-hover:bg-primary transition-colors">
+                    {service.icon}
+                  </div>
+                  <h4 className="text-2xl font-bold text-slate-950 mb-4">{service.title}</h4>
+                  <p className="text-slate-600 leading-relaxed">{service.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Real Work Gallery - Based on User Photos */}
+      <section className="py-24 bg-slate-950 text-white overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="mb-16">
+            <h2 className="text-center text-3xl md:text-5xl font-heading font-extrabold mb-4">
+              Fotos Reais do Nosso <span className="text-primary italic">Trabalho</span>
+            </h2>
+            <p className="text-center text-slate-400 font-light italic">Equipamentos aferidos e prontos para operação.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Foto 1 & 2: Plataformas Industriais */}
+            <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
+                <img src="/assets/balanca_pesos.jpg" alt="Balança com Pesos" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="font-bold text-sm">Plataforma Industrial</p>
+                    <p className="text-xs text-primary">Aferição com Peso Padrão</p>
+                </div>
+            </div>
+
+            {/* Foto 3: Urano */}
+            <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
+                <img src="/assets/balanca_urano.jpg.png" alt="Balança Urano" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="font-bold text-sm">Balança de Precisão</p>
+                    <p className="text-xs text-primary">Marca: Urano</p>
+                </div>
+            </div>
+
+            {/* Foto 4: Pop-Z */}
+            <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
+                <img src="/assets/balanca_popz.jpg.jpg" alt="Balança Pop-Z" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="font-bold text-sm">Balança Comercial</p>
+                    <p className="text-xs text-primary">Marca: Pop-Z</p>
+                </div>
+            </div>
+
+            {/* Foto 5: Grande Porte */}
+            <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
+                <img src="/assets/balanca_industrial.jpg.jpg" alt="Balança Industrial" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="font-bold text-sm">Grande Porte</p>
+                    <p className="text-xs text-primary">Manutenção Especializada</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Google My Business Section */}
+      <section id="localização" className="py-24 bg-slate-50">
+        <div className="container mx-auto px-6">
+          <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-200">
+            <div className="flex flex-col lg:flex-row">
+              {/* Google Map Embed */}
+              <div className="flex-1 min-h-[500px] relative">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1840.6863795511!2d-43.3768285!3d-22.6773531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99650059c6b6b7%3A0x67319c50c05db6cb!2sAv.%20Joaquim%20da%20Costa%20Lima%2C%202011%20-%20Santa%20Am%C3%A9lia%2C%20Belford%20Roxo%20-%20RJ%2C%2026115-315!5e0!3m2!1spt-BR!2sbr!4v1710500000000!5m2!1spt-BR!2sbr" 
+                  className="absolute inset-0 w-full h-full border-0 grayscale"
+                  allowFullScreen
+                  loading="lazy" 
+                ></iframe>
+              </div>
+
+              {/* Info Sidebar */}
+              <div className="lg:w-[480px] p-12 flex flex-col justify-center bg-slate-950 text-white">
+                <h3 className="text-4xl font-heading font-extrabold mb-8 italic text-primary">
+                  Venha Até Nós
+                </h3>
+                
+                <div className="space-y-10">
+                  <div className="flex gap-5">
+                    <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shrink-0 border border-primary/20">
+                      <MapPin className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-200 mb-1">Endereço Oficial</h4>
+                      <p className="text-slate-400 leading-relaxed text-sm">
+                        Av. Joaquim da Costa Lima, 2011<br/>
+                        Santa Amélia, Belford Roxo - RJ
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-5">
+                    <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shrink-0 border border-primary/20">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-200 mb-1">Telefones</h4>
+                      <p className="text-slate-400 text-sm">(21) 3771-8393</p>
+                      <p className="text-primary text-lg font-black mt-1">(21) 96408-9358</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12">
+                    <a 
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-primary hover:bg-blue-700 text-white py-5 rounded-2xl font-black flex items-center justify-center gap-3 transition-all shadow-lg shadow-primary/20"
+                    >
+                       FALAR COM O RONIL <ExternalLink className="w-5 h-5" />
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-16">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/10 pb-12 mb-12">
+            <div className="text-center md:text-left">
+              <div className="text-2xl font-black italic mb-2 tracking-tighter">KILOTEC BALANÇAS</div>
+              <p className="text-slate-400 text-sm italic font-light">Especialistas em Balanças Eletrônicas desde 1999.</p>
+            </div>
+            <div className="flex gap-6">
+              <a href="#início" className="text-sm text-slate-400 hover:text-white transition-colors uppercase tracking-widest font-bold text-[10px]">Início</a>
+              <a href="#serviços" className="text-sm text-slate-400 hover:text-white transition-colors uppercase tracking-widest font-bold text-[10px]">Serviços</a>
+              <button 
+                onClick={() => {
+                  setCurrentPage('privacy');
+                  window.scrollTo(0, 0);
+                }}
+                className="text-sm text-slate-400 hover:text-white transition-colors uppercase tracking-widest font-bold text-[10px]"
+              >
+                Privacidade
+              </button>
+              <a href="#localização" className="text-sm text-slate-400 hover:text-white transition-colors uppercase tracking-widest font-bold text-[10px]">Contato</a>
+            </div>
+          </div>
+          <div className="text-center text-slate-500 text-xs space-y-4">
+            <p>© 2024 Kilotec Balanças. Todos os direitos reservados.</p>
+            <p className="font-light">
+              Desenvolvido por <a href="https://desenvolvimentodesites.dev.br/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-blue-400 font-bold transition-colors">Alexis Marketing & Dev</a>
+              <span className="mx-2">•</span>
+              Construído em <span className="italic">Models next-gen React-Starter</span>
+            </p>
+            <p className="text-[10px] opacity-50">Baixada Fluminense, Rio de Janeiro.</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Floating WhatsApp Button */}
+      <motion.a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        whileHover={{ scale: 1.1 }}
+        className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#128C7E] transition-all flex items-center justify-center group"
+      >
+        <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 font-bold whitespace-nowrap group-hover:mr-2">
+          Suporte Kilotec
+        </span>
+        <img src="/assets/whatsapp_icon.png" alt="WhatsApp" className="w-10 h-10 object-contain" />
+      </motion.a>
     </div>
   );
 };
 
-export default App;
+export default KilotecApp;
