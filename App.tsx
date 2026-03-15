@@ -188,7 +188,7 @@ const KilotecApp: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Foto 1 & 2: Plataformas Industriais */}
             <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
-                <img src="/assets/balanca_pesos.jpg" alt="Manutenção de balanças industriais com pesos padrão" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <img src="/assets/balanca_atena.jpg" alt="Manutenção de balanças industriais com pesos padrão" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="font-bold text-sm">Pesos Padrão</p>
                     <p className="text-xs text-primary">Calibração e Manutenção de Balanças</p>
@@ -197,7 +197,7 @@ const KilotecApp: React.FC = () => {
 
             {/* Foto 3: Urano */}
             <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
-                <img src="/assets/balanca_urano.jpg.png" alt="Conserto de balança digital Urano - Assistência Técnica" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <img src="/assets/balanca_pix.jpg" alt="Conserto de balança digital Urano - Assistência Técnica" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="font-bold text-sm">Balança de Precisão</p>
                     <p className="text-xs text-primary">Manutenção Balança Urano</p>
