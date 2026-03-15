@@ -55,7 +55,7 @@ const KilotecApp: React.FC = () => {
     },
     {
       title: "Manutenção de Balanças Industriais",
-      desc: "Reparo especializado em plataformas industriais até 500kg. Calibração garantida por técnicos credenciados para garantir a precisão do seu negócio.",
+      desc: "Reparo especializado em balanças de plataforma de pequeno, médio e grande porte. Calibração garantida por técnicos credenciados.",
       icon: <Wrench className="w-6 h-6" />
     },
     {
@@ -132,7 +132,7 @@ const KilotecApp: React.FC = () => {
               <span className="font-light text-4xl md:text-6xl block mt-2">CONSERTO DE BALANÇAS</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed font-light max-w-xl">
-              Referência em <strong>manutenção de balanças industriais (até 500kg)</strong> e <strong>conserto de balança digital</strong> no Rio de Janeiro, Baixada Fluminense e Grande Rio. Assistência técnica autorizada com precisão certificada pelo IPEM.
+              Referência em <strong>manutenção de balanças industriais</strong> e <strong>conserto de balança digital</strong> no Rio de Janeiro, Baixada Fluminense e Grande Rio. Assistência técnica autorizada com precisão certificada pelo IPEM.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 hover:bg-blue-700 transition-all shadow-xl shadow-primary/30">
@@ -215,10 +215,10 @@ const KilotecApp: React.FC = () => {
 
             {/* Foto 5: Industrial */}
             <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-white/5 group relative">
-                <img src="/assets/balanca_industrial.jpg.jpg" alt="Reparo de balanças industriais até 500kg" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+                <img src="/assets/balanca_industrial.jpg.jpg" alt="Reparo de balanças industriais de pequeno, médio e grande porte" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="font-bold text-sm">Industrial</p>
-                    <p className="text-xs text-primary">Manutenção Técnica até 500kg</p>
+                    <p className="text-xs text-primary">Plataformas de Pequeno a Grande Porte</p>
                 </div>
             </div>
           </div>
@@ -241,7 +241,7 @@ const KilotecApp: React.FC = () => {
               </div>
               <div className="space-y-2">
                 <p>• Manutenção de balança industrial</p>
-                <p>• Calibração de balanças até 500kg</p>
+                <p>• Calibração de balanças de plataforma</p>
                 <p>• Conserto de balança eletrônica</p>
                 <p>• Técnico de balanças certificado</p>
               </div>
@@ -253,7 +253,7 @@ const KilotecApp: React.FC = () => {
               </div>
             </div>
             <p className="mt-12 text-slate-500 text-sm leading-relaxed italic">
-              A Kilotec Balanças é a sua melhor escolha para <strong>conserto de balanças</strong> e <strong>manutenção preventiva</strong>. Atendemos com excelência técnica marcas como Toledo, Filizola, Ramuza e Urano em todo o <strong>Rio de Janeiro, Baixada Fluminense e Grande Rio</strong>. Garantimos que sua balança digital ou industrial (até 500kg) esteja sempre de acordo com as normas do INMETRO. Seja para balanças comerciais, de bancada ou industriais leves, nossa equipe está pronta para oferecer a melhor assistência técnica do estado.
+              A Kilotec Balanças é a sua melhor escolha para <strong>conserto de balanças</strong> e <strong>manutenção preventiva</strong>. Atendemos com excelência técnica marcas como Toledo, Filizola, Ramuza e Urano em todo o <strong>Rio de Janeiro, Baixada Fluminense e Grande Rio</strong>. Garantimos que sua balança digital ou industrial esteja sempre de acordo com as normas do INMETRO. Seja para balanças comerciais, de bancada ou industriais de pequeno a grande porte, nossa equipe está pronta para oferecer a melhor assistência técnica do estado.
             </p>
           </div>
         </div>
