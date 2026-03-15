@@ -313,7 +313,7 @@ const KilotecApp: React.FC = () => {
                       rel="noopener noreferrer"
                       className="w-full bg-primary hover:bg-blue-700 text-white py-5 rounded-2xl font-black flex items-center justify-center gap-3 transition-all shadow-lg shadow-primary/20"
                     >
-                       FALAR COM O RONIL <ExternalLink className="w-5 h-5" />
+                       Fale com a gente <ExternalLink className="w-5 h-5" />
                     </a>
                 </div>
               </div>
